@@ -7,6 +7,7 @@ import Historia02 from "./pages/Historia02"
 import Productos from "./pages/Productos";
 import Servicios from "./screens/Servicios.jsx";
 import Contacto from "./pages/Contacto.jsx"
+import Error404 from "./pages/Error404.jsx"
 
 
 function App() {
@@ -20,6 +21,10 @@ function App() {
         <Route path="/Historia02" element={<Historia02 />} />
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/contacto" element={<Contacto />} />
+
+        {/* ERROR */}
+      <Route path="/error" element={<Error404 />} />
+      <Route path="*" element={<Error404 />} />
 
 
       </Routes>

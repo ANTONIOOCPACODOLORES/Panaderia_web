@@ -15,7 +15,12 @@ function Navbar() {
 
       <div className="nav-right">
         <button className="call-btn">Llamar</button>
-        <span>🛒</span>
+
+        {/* SOLO ESTO SE AGREGA */}
+        <Link to="/Error404" style={{ textDecoration: "none" }}>
+          <span style={{ cursor: "pointer" }}>🛒</span>
+        </Link>
+
         <span>👤</span>
       </div>
     </header>

@@ -1,4 +1,5 @@
 import "../styles/ofrecemos.css"
+import { Link } from "react-router-dom"
 
 function Ofrecemos() {
   return (
@@ -12,9 +13,9 @@ function Ofrecemos() {
         <img src="./assets/cuernos.jpg" alt="Producto 3" />
       </div>
 
-      <button className="secondary-btn">
-        Más productos
-      </button>
+      <Link to="/productos" className="secondary-btn">
+      Más productos
+      </Link>
     </section>
   )
 }
