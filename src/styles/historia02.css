@@ -1,0 +1,104 @@
+.historia {
+  padding: 90px 10%;
+  background-color: #f7f2ea;
+}
+
+/* CONTENEDOR BASE */
+.historia-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* INVERTIR ORDEN */
+.historia-container.reverse {
+  flex-direction: row-reverse;
+}
+
+/* IMÁGENES */
+.historia-img img {
+  width: 420px;
+  max-width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* TEXTO */
+.historia-card {
+  max-width: 520px;
+}
+
+.historia-card h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #3b2f2f;
+}
+
+.historia-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #5a4a42;
+  margin-bottom: 14px;
+}
+
+/* TEXTO DESTACADO */
+.destacado {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #a35d2a;
+}
+
+/* VARIANTES DE SECCIÓN */
+.historia-secundaria {
+  background-color: #e8e0e0a8;
+}
+
+.historia-oscura {
+  background-color: #a29595;
+}
+
+.historia-oscura h2,
+.historia-oscura p {
+  color: #272222;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .historia-container,
+  .historia-container.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .historia-img img {
+    width: 100%;
+  }
+}
+
+/* 🛑 PROTEGER TEXTO DE HISTORIA */
+.historia-card {
+  display: block;
+}
+
+.historia-card p {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+}
+
+/* Centrado elegante en secciones claras */
+.historia-secundaria .historia-card {
+  margin-left: auto;
+  margin-right: auto;
+}
+.destacado {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 30px 0;
+}
+.destacado {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 30px 0;
+}

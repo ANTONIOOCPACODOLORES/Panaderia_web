@@ -1,63 +1,104 @@
 import React from "react";
-import "../styles/historia.css";
+import "../styles/historia02.css";
+import Footer from "../components/Footer";
 
 function Historia02() {
   return (
-    <main>
-      {/* ================= HISTORIA ================= */}
+    <>
+    
+      {/* ================= HISTORIA 1 ================= */}
       <section className="historia">
         <div className="historia-container">
-          <div className="historia-img">
-            <img src="/img/Historia.avif" alt="Panadería artesanal" />
-          </div>
+          
+          {/* TEXTO */}
           <div className="historia-card">
             <h2>Nuestra Historia</h2>
+
             <p>
               Nuestra panadería nació del amor por el pan artesanal y las recetas
               tradicionales que han pasado de generación en generación.
             </p>
+
             <p>
               Desde nuestros inicios, cada amanecer encendemos el horno con la misma
-              pasión: ofrecer pan fresco, delicioso y hecho con ingredientes de la
-              mejor calidad.
+              pasión: ofrecer pan fresco y delicioso.
             </p>
+
             <p>
               Con el paso del tiempo, nos hemos convertido en un lugar de encuentro
-              para familias y amigos, donde el aroma del pan recién horneado nos
-              recuerda que los mejores momentos se comparten alrededor de la mesa.
+              para familias y amigos.
             </p>
+
             <p>
               Gracias por confiar en nosotros y ser parte de nuestra historia.
             </p>
           </div>
+
+          {/* IMAGEN */}
+          <div className="historia-img">
+            <img src="/assets/HRP01.jpg" alt="Panadería artesanal" />
+          </div>
+
         </div>
       </section>
 
-      {/* ================= SECCIONES ADICIONALES ================= */}
+      {/* ================= HISTORIA 2 ================= */}
       <section className="historia historia-secundaria">
-        <div className="historia-container">
+        <div className="historia-container reverse">
+
+          {/* TEXTO */}
           <div className="historia-card">
             <h2>Desde Nuestra Cocina, con Todo Nuestro Cariño</h2>
+
             <p>
-              Todavía recuerdo cuando empecé a hornear pan en mi cocina y a venderlo desde casa. Entonces ni siquiera me pregunté si era una buena idea.
+              Todavía recuerdo cuando empecé a hornear pan en mi cocina.
             </p>
+
             <p className="destacado">Sólo lo hice.</p>
+
             <p>
-              Lo hice porque descubrí el poder de una buena receta para hacer sonreír a las personas, y supe que quería dedicar mi vida a eso.
+              Hoy, <strong>La Casa del Pan</strong> es mucho más que ese inicio.
             </p>
+
             <p>
-              Hoy, <strong>La Casa del Pan</strong> es más que ese inicio. Es un sueño que compartimos con todo nuestro equipo.
-            </p>
-            <p>
-              Si tuviera que empezar desde cero, lo haría todo otra vez. Porque nuestra misión sigue siendo la misma: <strong>verte sonreír en cada bocado</strong>.
+              Nuestra misión sigue siendo la misma:
+              <strong> verte sonreír en cada bocado</strong>.
             </p>
           </div>
+
+          {/* IMAGEN */}
           <div className="historia-img">
-            <img src="/img/panaderiatonys.jpg" alt="Pastel tradicional" />
+            <img src="/assets/Historia02.jpg" alt="Pan tradicional" />
           </div>
+
         </div>
       </section>
-    </main>
+
+      {/* ================= HISTORIA 3 ================= */}
+      <section className="historia historia-oscura">
+        <div className="historia-container">
+
+          {/* TEXTO */}
+          <div className="historia-card">
+            <h2>En 1985</h2>
+
+            <p>
+              Se amplió el giro de "La Universal" con una línea completa de pastelería, lo cual tuvo una gran aceptación por la calidad de sus materias primas, su presentación y los precios competitivos, dando así oportunidad de vender a diferentes restaurantes, banquetes y eventos.
+            </p>
+
+            <p>
+              La primera sucursal de la matriz con nombre de "La Universal" fue la tienda ubicada en Churubusco, donde se logró tener presencia de la marca en el sur de la Ciudad.
+            </p>
+          </div>
+
+          {/* IMAGEN */}
+          <div className="historia-img">
+            <img src="/assets/123.jpg" alt="Escena 1985" />
+          </div>
+
+        </div>
+      </section>
+    </>
   );
 }
 
