@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f3ede7;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background-color: #c7c2bd !important; /* beige elegante */
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+  color: #4a2f1b;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4a2f1b;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid #4a2f1b;
+  padding-bottom: 4px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #4a2f1b;
+}
+
+.call-btn {
+  background-color: #8b4513; /* café más oscuro para contraste */
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+
+.call-btn:hover {
+  background-color: #6e3610;
+}
+
+/* =========================
+   HERO AJUSTADO PROFESIONAL
+========================= */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: 85vh;
+  padding: 0 100px;
+  gap: 60px;
+  background-color: #bcbbaf;
+}
+
+/* TEXTO IZQUIERDA */
+.hero-left {
+  max-width: 520px;
+  text-align: center; /* centra todo el texto dentro */
+}
+
+.hero-left h1 {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  color: var(--cafe);
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+  color: var(--cafe-oscuro);
+}
+
+/* BOTÓN */
+
+.cta-button {
+  display: inline-block;
+  background-color: #a4b1a6;
+  color: var(--blanco);
+  padding: 18px 40px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.cta-button:hover {
+  background-color: var(--cafe-oscuro);
+}
+
+/* IMAGEN DERECHA */
+
+.hero-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero-carousel {
+  width: 100%;
+  max-width: 650px;
+  height: 420px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-carousel .slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}

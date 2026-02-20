@@ -1,0 +1,51 @@
+.ofrecemos {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #d5cec3;
+}
+
+.ofrecemos h2 {
+  color: #8b4513;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.ofrecemos p {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: #555;
+}
+
+.ofrecemos-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.ofrecemos-grid img {
+  width: 220px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.ofrecemos-grid img:hover {
+  transform: scale(1.05);
+}
+
+.secondary-btn {
+  background-color: #8b4513;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.secondary-btn:hover {
+  background-color: #6e3610;
+}
