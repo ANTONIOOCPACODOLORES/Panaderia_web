@@ -102,3 +102,12 @@
   font-size: 1.4rem;
   margin: 30px 0;
 }
+
+.navbar {
+  background-color: #f8f1e7;      /* color fijo del navbar */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* 👈 sombra elegante */
+  border-bottom: 1px solid rgba(0,0,0,0.05); /* 👈 separación fina */
+  position: sticky;               /* o fixed */
+  top: 0;
+  z-index: 1000;
+}
