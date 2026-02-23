@@ -1,40 +1,65 @@
+/* ================= RESET GLOBAL ================= */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #d1c7c0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 /* ================= CONTACTO PAGE ================= */
 .contacto-page {
-  background: #f7f1e8;
+  width: 100%;
+  min-height: 100vh;
+  background: #dcd4c9;
   padding: 60px 20px 80px;
 }
 
-/* Título */
-#contacto h2 {
-  text-align: center;
-  font-size: 42px;
-  color: #6b4b2a;
-  margin-bottom: 16px;
-}
-
-/* Descripción */
-#contacto > p {
-  max-width: 720px;
-  margin: 0 auto 50px;
-  text-align: center;
-  font-size: 16px;
-  color: #555;
-}
-
-/* ================= FORM + INFO ================= */
-#contacto {
+/* ================= CONTENEDOR INTERNO ================= */
+.contacto-container {
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.contacto-form {
-  max-width: 520px;
+/* ================= TÍTULO ================= */
+#contacto h2 {
+  text-align: center;
+  font-size: 42px;
+  color: #6b4b2a;
+  margin-bottom: 14px;
+}
+
+/* ================= DESCRIPCIÓN ================= */
+#contacto > .contacto-container > p {
+  max-width: 720px;
   margin: 0 auto 60px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ================= GRID FORM + INFO ================= */
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* ================= FORMULARIO ================= */
+.contacto-form {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  background: #fff;
-  padding: 30px;
+  background: #e0d5d5;
+  padding: 32px;
   border-radius: 22px;
   box-shadow: 0 12px 28px rgba(0,0,0,0.08);
 }
@@ -52,6 +77,12 @@
   border: 1px solid #d6c7b2;
   font-size: 14px;
   outline: none;
+  background: #fff;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  border-color: #b08968;
 }
 
 .contacto-form textarea {
@@ -59,28 +90,28 @@
   resize: none;
 }
 
-/* Botón */
+/* ================= BOTÓN ================= */
 .contacto-form button {
-  margin-top: 10px;
+  margin-top: 12px;
   padding: 14px;
   border-radius: 25px;
   border: none;
   background: #e4d6bd;
   font-weight: 700;
+  font-size: 14px;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, transform 0.1s ease;
 }
 
 .contacto-form button:hover {
   background: #d6c2a3;
+  transform: translateY(-1px);
 }
 
 /* ================= INFO CONTACTO ================= */
 .info-contacto {
-  max-width: 520px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 30px;
+  background: #ffffff;
+  padding: 32px;
   border-radius: 22px;
   box-shadow: 0 12px 28px rgba(0,0,0,0.08);
 }
@@ -95,13 +126,16 @@
   font-size: 14px;
   margin-bottom: 10px;
   color: #555;
+  line-height: 1.5;
 }
+
 /* ================= FOOTER ================= */
 .footer {
-  background: #a7a39d;   /* opcional: fondo claro para que el negro se vea bien */
-  color: #000;           /* 🔥 TEXTO NEGRO */
+  width: 100%;
+  background: #a7a39d;
+  color: #000;
   padding: 60px 20px;
-  margin-top: 80px;
+  margin: 0;
 }
 
 .footer-container {
@@ -112,38 +146,23 @@
   gap: 40px;
 }
 
-.footer-brand h2 {
-  font-size: 22px;
-  margin-bottom: 6px;
-  color: #000;
-}
-
-.footer-brand span {
-  font-size: 12px;
-  opacity: 0.8;
-  color: #000;
-}
-
-.footer-brand p {
-  margin-top: 12px;
-  font-size: 13px;
-  line-height: 1.5;
-  color: #000;
-}
-
+.footer-brand h2,
 .footer-col h4,
 .footer-social h4 {
-  margin-bottom: 14px;
-  font-size: 14px;
   color: #000;
+}
+
+.footer-brand span,
+.footer-brand p,
+.footer-col a {
+  color: #000;
+  font-size: 13px;
 }
 
 .footer-col a {
-  display: block;
-  color: #000;          /* 🔥 links negros */
-  font-size: 13px;
-  margin-bottom: 8px;
   text-decoration: none;
+  margin-bottom: 8px;
+  display: block;
 }
 
 .footer-col a:hover {
@@ -154,14 +173,21 @@
   margin-right: 10px;
   font-size: 18px;
   cursor: pointer;
-  color: #000;          /* 🔥 íconos negros */
+  color: #000;
 }
 
 .footer-social img {
   margin-top: 12px;
   width: 120px;
 }
+
 /* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .contacto-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   #contacto h2 {
     font-size: 32px;

@@ -135,3 +135,36 @@ body {
   object-fit: cover;
   border-radius: 30px;
 }
+.auth-links {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-btn {
+  background: transparent;
+  border: 1px solid #b45309;
+  color: #b45309;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.auth-btn.secondary {
+  background: #b45309;
+  color: white;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: #92400e;
+  cursor: pointer;
+  font-size: 0.85rem;
+}

@@ -9,6 +9,8 @@ import Servicios from "./screens/Servicios.jsx";
 import Contacto from "./pages/Contacto.jsx"
 import Error404 from "./pages/Error404.jsx"
 import Footer from "./components/Footer.jsx"
+import Login from "./pages/Login.jsx"
+import Registro from "./pages/Registro.jsx";
 
 
 function App() {
@@ -22,11 +24,12 @@ function App() {
         <Route path="/Historia02" element={<Historia02 />} />
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/contacto" element={<Contacto />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/registro" element={<Registro />} />
 
         {/* ERROR */}
       <Route path="/error" element={<Error404 />} />
       <Route path="*" element={<Error404 />} />
-
 
       </Routes>
       <Footer/>
