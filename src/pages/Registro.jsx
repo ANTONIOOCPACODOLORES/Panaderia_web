@@ -1,8 +1,11 @@
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import "../styles/login.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Registro() {
+  const navigate = useNavigate();
+
   const [form, setForm] = useState({
     nombre: "",
     correo: "",
@@ -112,6 +115,11 @@ export default function Registro() {
       password: "",
       recaptcha: false,
     });
+    
+    // pequeña pausa opcional para que se vea el mensaje, cuando el usuario llene el formulario se guarda en localStorage y despues de 1.2 seg va al inicio
+    setTimeout(() => {
+      navigate("/")
+    }, 1200);
   };
 
   return (

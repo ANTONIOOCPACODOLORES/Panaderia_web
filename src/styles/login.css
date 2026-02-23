@@ -11,7 +11,7 @@
    CONTENEDOR GENERAL
 ================================ */
 .login-wrapper {
-  min-height: 100vh;
+  flex: 1; /* 👈 CLAVE */
   background: linear-gradient(
     120deg,
     #473d2e,

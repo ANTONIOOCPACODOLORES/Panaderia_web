@@ -18,21 +18,21 @@ function App() {
     <BrowserRouter>
       <Navbar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/productos" element={<Productos />} />
-        <Route path="/Historia02" element={<Historia02 />} />
-        <Route path="/servicios" element={<Servicios />} />
-        <Route path="/contacto" element={<Contacto />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/registro" element={<Registro />} />
-
-        {/* ERROR */}
+    <main className="app-content">
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/productos" element={<Productos />} />
+      <Route path="/Historia02" element={<Historia02 />} />
+      <Route path="/servicios" element={<Servicios />} />
+      <Route path="/contacto" element={<Contacto />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/registro" element={<Registro />} />
       <Route path="/error" element={<Error404 />} />
       <Route path="*" element={<Error404 />} />
+    </Routes>
+    </main>
 
-      </Routes>
-      <Footer/>
+  <Footer />
     </BrowserRouter>
   )
 }
