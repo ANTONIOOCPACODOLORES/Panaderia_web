@@ -8,9 +8,9 @@ import Productos from "./pages/Productos";
 import Servicios from "./screens/Servicios.jsx";
 import Contacto from "./pages/Contacto.jsx"
 import Error404 from "./pages/Error404.jsx"
-import Footer from "./components/Footer.jsx"
 import Login from "./pages/Login.jsx"
 import Registro from "./pages/Registro.jsx";
+import { Footer } from "./components/footer/index.jsx"
 
 
 function App() {
