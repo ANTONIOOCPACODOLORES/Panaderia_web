@@ -45,17 +45,12 @@ function Hero() {
       <div className="hero-right">
         <div className="hero-carousel">
           {/* Flechas */}
-          <button className="arrow left" onClick={prevSlide}>
-            &#10094;
-          </button>
           <img
             src={images[currentIndex]}
             className="slide"
             alt={`Producto ${currentIndex + 1}`}
           />
-          <button className="arrow right" onClick={nextSlide}>
-            &#10095;
-          </button>
+
 
           {/* Indicadores */}
           <div className="carousel-dots">

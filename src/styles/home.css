@@ -73,7 +73,29 @@ body {
   min-height: 85vh;
   padding: 0 100px;
   gap: 60px;
-  background-color: #bcbbaf;
+
+  /* Gradiente panadería */
+  background: linear-gradient(
+    62deg,
+    #DDD4CE,
+    #70837f,
+    #91817e,
+    #81776a
+  );
+  background-size: 400% 400%;
+  animation: heroGradient 18s ease infinite;
+}
+
+@keyframes heroGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* TEXTO IZQUIERDA */
