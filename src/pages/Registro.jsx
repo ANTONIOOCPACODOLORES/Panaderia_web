@@ -24,6 +24,15 @@ export default function Registro() {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
+    // VALIDACIÓN PARA QUE NOMBRE NO PERMITA NÚMEROS
+    if (name === "nombre") {
+      if (/\d/.test(value)) {
+        setError("El nombre no permite números.");
+        return;
+      }
+      setError("");
+    }
+
     setForm({
       ...form,
       [name]: value,
@@ -34,7 +43,6 @@ export default function Registro() {
      HANDLE RECAPTCHA
   ============================== */
   const handleRecaptcha = (value) => {
-    // Si value existe, el captcha fue validado
     setForm({
       ...form,
       recaptcha: !!value,
@@ -46,12 +54,9 @@ export default function Registro() {
   ============================== */
   const validarFormulario = () => {
     // NOMBRE
-    if (form.nombre.length < 5) {
-      return "El nombre debe tener al menos 5 caracteres.";
-    }
-
+    // NOMBRE
     if (/\d/.test(form.nombre)) {
-      return "El nombre no debe contener números.";
+      return "El nombre no permite números.";
     }
 
     // CORREO
@@ -115,10 +120,10 @@ export default function Registro() {
       password: "",
       recaptcha: false,
     });
-    
-    // pequeña pausa opcional para que se vea el mensaje, cuando el usuario llene el formulario se guarda en localStorage y despues de 1.2 seg va al inicio
+
+    // redirección al inicio
     setTimeout(() => {
-      navigate("/")
+      navigate("/");
     }, 1200);
   };
 
@@ -131,6 +136,7 @@ export default function Registro() {
         </p>
 
         <form className="login-form" onSubmit={handleSubmit}>
+          
           {/* NOMBRE */}
           <div className="input-group">
             <label>Nombre completo</label>
@@ -202,6 +208,7 @@ export default function Registro() {
           {error && (
             <p style={{ color: "red", fontSize: "0.85rem" }}>{error}</p>
           )}
+
           {success && (
             <p style={{ color: "green", fontSize: "0.85rem" }}>{success}</p>
           )}
